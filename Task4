@@ -1,0 +1,30 @@
+#include <iostream>
+#include <vector>
+
+int test_program(int A, int B) {
+    A = A - B;
+    int C = A * 2;
+    return C;
+}
+
+std::vector<int> findUnachievable(int B) {
+    std::vector<int> Duplicate;
+    for (int A = -1000; A <= 1000; ++A) {
+        int C = test_program(A, B);
+        if (C != (A - B) * 2) {
+            Duplicate.push_back(A);
+        }
+    }
+    return Duplicate;
+}
+
+int main() {
+    int B = 1;
+    std::vector<int> unachievable = findUnachievable(B);
+    std::cout << "Unachievable test cases for B = " << B << " :";
+    for (int A : unachievable) {
+        std::cout << " " << A;
+    }
+    std::cout << std::endl;
+    return 0;
+}
