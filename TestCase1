@@ -11,13 +11,10 @@ def split_and_sort(nums):
     odd_nums = [num for num in nums if num % 2 == 1]
     even_nums = [num for num in nums if num % 2 == 0]
     
-    # remove duplicates and sort
-    odd_nums = sorted(odd_nums)
-    even_nums = sorted(even_nums)
 
-    #Improvement
-    #odd_nums = sorted(list(set(odd_nums)))
-    #even_nums = sorted(list(set(even_nums)))
+    #Improvement remove duplicates and sort
+    odd_nums = sorted(list(set(odd_nums)))
+    even_nums = sorted(list(set(even_nums)))
     
     return odd_nums, even_nums
 
