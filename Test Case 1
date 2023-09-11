@@ -14,6 +14,10 @@ def split_and_sort(nums):
     # remove duplicates and sort
     odd_nums = sorted(odd_nums)
     even_nums = sorted(even_nums)
+
+    #Improvement
+    #odd_nums = sorted(list(set(odd_nums)))
+    #even_nums = sorted(list(set(even_nums)))
     
     return odd_nums, even_nums
 
